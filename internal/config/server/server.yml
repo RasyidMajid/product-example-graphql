@@ -1,0 +1,6 @@
+server:
+  graphql:
+    tls:
+    host:
+    port: 8888
+    timeout:

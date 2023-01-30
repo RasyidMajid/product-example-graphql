@@ -1,0 +1,28 @@
+type Product {
+    id: ID
+    NamaProduct: String
+    JenisProduct: String
+    HargaProduct: Float
+}
+
+input ProductRequest {
+    id: ID!
+    NamaProduct: String!
+    JenisProduct: String!
+    HargaProduct: Float!
+}
+
+type ProductResponse {
+    StatusCode: String!
+    StatusDesc: String!
+    Data: Product
+    DataList: [Product]
+}
+
+extend type Mutation {
+    CreateProduct(request: ProductRequest!):ProductResponse
+}
+
+extend type Query {
+    GetProductById(id: ID!): ProductResponse
+}
