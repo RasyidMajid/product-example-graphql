@@ -4,8 +4,8 @@ schema:
 
 # Where should the generated server code go?
 exec:
-  filename: src/infrastructure/generated/generated.go
-  package: generated
+  filename: infrastructure/gql/executable/executable.go
+  package: executable
 
 # Uncomment to enable federation
 # federation:
@@ -14,14 +14,14 @@ exec:
 
 # Where should any generated models go?
 model:
-  filename: src/infrastructure/models/models.go
+  filename: infrastructure/gql/models/model.go
   package: models
 
 # Where should the resolver implementations go?
 resolver:
   layout: follow-schema
-  dir: src/infrastructure/controller
-  package: controller
+  dir: infrastructure/gql/resolver
+  package: resolver
 
 # Optional: turn on use ` + "`" + `gqlgen:"fieldName"` + "`" + ` tags in your models
 # struct_tag: json
@@ -42,7 +42,7 @@ resolver:
 # gqlgen will search for any type names in the schema in these go packages
 # if they match it will use them, otherwise it will generate them.
 autobind:
-  - "product-service-graphql/src/infrastructure/models"
+  - "product-service-graphql/infrastructure/gql/models"
 
 # This section declares type mapping between the GraphQL and go type systems
 #
