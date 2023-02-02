@@ -5,7 +5,7 @@ import (
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
-	dbConfig "product-service-graphql/internal/config/db"
+	dbConfig "product-service-graphql/config/db"
 	"product-service-graphql/src/adapter/presenter/model"
 	"time"
 )

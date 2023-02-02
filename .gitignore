@@ -131,3 +131,4 @@ fabric.properties
 internal/config/db/*.yml
 internal/config/server/*.yml
 .idea
+.DS_Store

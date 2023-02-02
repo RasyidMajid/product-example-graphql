@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"github.com/spf13/viper"
 	"os"
-	"product-service-graphql/internal/config/db"
-	"product-service-graphql/internal/config/server"
+	"product-service-graphql/config/db"
+	"product-service-graphql/config/server"
 	"strings"
 )
 
@@ -23,7 +23,7 @@ func init() {
 		panic(err)
 	}
 
-	viper.AddConfigPath(dir + "/internal/config/server")
+	viper.AddConfigPath(dir + "/config/server")
 	viper.SetConfigType("yaml")
 	viper.SetConfigName("server.yml")
 	err = viper.MergeInConfig()
@@ -31,7 +31,7 @@ func init() {
 		panic(fmt.Errorf("Cannot load Server config: %v", err))
 	}
 
-	viper.AddConfigPath(dir + "/internal/config/db")
+	viper.AddConfigPath(dir + "/config/db")
 	viper.SetConfigType("yaml")
 	viper.SetConfigName("database.yml")
 	err = viper.MergeInConfig()

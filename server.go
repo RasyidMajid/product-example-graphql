@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-	cfg "product-service-graphql/internal/config"
+	cfg "product-service-graphql/config"
 	"product-service-graphql/src/infrastructure/controller"
 	"product-service-graphql/src/infrastructure/generated"
 	container "product-service-graphql/src/shared/di"

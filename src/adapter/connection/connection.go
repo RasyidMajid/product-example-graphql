@@ -3,7 +3,7 @@ package connection
 import (
 	"fmt"
 	"gorm.io/gorm"
-	"product-service-graphql/internal/config"
+	"product-service-graphql/config"
 	"product-service-graphql/src/adapter/connection/mysql"
 )
 
