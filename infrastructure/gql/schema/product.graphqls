@@ -19,11 +19,11 @@ type ProductResponse {
     DataList: [Product]
 }
 
-extend type Mutation {
+type Mutation {
     CreateProduct(request: ProductRequest!):ProductResponse
 }
 
-extend type Query {
-    GetAllProduct(): ProductResponse
+type Query {
+    GetAllProduct: ProductResponse
     GetProductById(id: ID!): ProductResponse
 }
